@@ -13,7 +13,7 @@ import { SinglePageAppComponent } from './single-page-app/single-page-app.compon
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: '', component: LandingComponent },
+  { path: 'home', component: LandingComponent },
   { path: 'app', component: SinglePageAppComponent },
   { path: '', redirectTo: 'app', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
