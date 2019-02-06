@@ -16,7 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 const appRoutes: Routes = [
-  { path: '', component: LandingComponent },
+  { path: '', component: LandingComponent, pathMatch: 'full' },
   { path: 'portfolio', component: SinglePageAppComponent },
   { path: 'mobile', component: SinglePageAppComponentMobile },
   { path: '**', component: PageNotFoundComponent }
