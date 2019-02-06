@@ -11,11 +11,13 @@ import { TheWriterComponent } from './trifold/the-writer/the-writer.component';
 import { LandingComponent } from './landing/landing.component';
 import { StarredConfigService } from './starred.service';
 import { SinglePageAppComponent } from './single-page-app/single-page-app.component';
+import { SinglePageAppComponentMobile } from './single-page-app/single-page-app.mobile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent },
   { path: 'portfolio', component: SinglePageAppComponent },
+  { path: 'mobile', component: SinglePageAppComponentMobile },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
     TheWriterComponent,
     LandingComponent,
     SinglePageAppComponent,
+    SinglePageAppComponentMobile,
     PageNotFoundComponent
   ],
   imports: [

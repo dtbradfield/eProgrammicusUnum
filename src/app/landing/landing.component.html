@@ -2,12 +2,20 @@
     <main>
         <div class="split left">
             <div class="centered">
-                <nav>
-                    <a routerLink="/portfolio" style="color: #98CE00;">
+                <div *ngIf="desktopView else mobileAppPortfolio">
+                    <a href="portfolio" style="color: #98CE00;">
                         <img src="https://i.imgur.com/y8SymGL.png" alt="Donald's Logo" 
-                        height="140em" width="auto" class="dtbLogo"/>
+                            height="140em" width="auto" class="dtbLogo"/>
                     </a>
-                </nav>
+                </div>
+                <ng-template #mobileAppPortfolio>
+                    <div>
+                        <a href="mobile" style="color: #98CE00;">
+                            <img src="https://i.imgur.com/y8SymGL.png" alt="Donald's Logo" 
+                                height="80em" width="auto" class="dtbLogo"/>
+                        </a>
+                    </div>
+                </ng-template>
                 <hr>
                 <h5>
                 DTBradfield's Professional Portfolio
@@ -20,10 +28,20 @@
         </div>
         <div class="split right">
             <div class="centered">
-                <a href="portfolio">
-                    <img src="https://i.imgur.com/WomOPXz.png" 
-                    alt="lysurge logo" class="border"/>
-                </a>
+                <div *ngIf="desktopView else mobileAppLySurge">
+                    <a href="portfolio">
+                        <img src="https://i.imgur.com/WomOPXz.png" 
+                        alt="lysurge logo" class="border"/>
+                    </a>
+                </div>
+                <ng-template #mobileAppLySurge>
+                    <div>
+                        <a href="mobile">
+                            <img src="https://i.imgur.com/WomOPXz.png" 
+                                alt="lysurge logo" class="border" height="80em" width="auto"/>
+                        </a>
+                    </div>
+                </ng-template>
                 <hr>
                 <h5>
                 LySurge
