@@ -13,6 +13,7 @@ import { StarredConfigService } from './starred.service';
 import { SinglePageAppComponent } from './single-page-app/single-page-app.component';
 import { SinglePageAppComponentMobile } from './single-page-app/single-page-app.mobile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent },
@@ -38,7 +39,10 @@ const appRoutes: Routes = [
     DeviceDetectorModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [StarredConfigService],
+  providers: [
+    StarredConfigService,
+    {provide: LocationStrategy, useClass: PathLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
