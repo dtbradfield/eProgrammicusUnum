@@ -12,6 +12,9 @@ export class LandingComponent implements OnInit {
   public mobileView = false;
   public tabletView = false;
   public desktopView = false;
+  loadLanding: boolean = true;
+  loadPortfolio: boolean = false;
+  loadMobilePortfolio: boolean = false;
 
   constructor( private deviceService: DeviceDetectorService ) { this.detectMobile();  }
 
@@ -23,6 +26,18 @@ export class LandingComponent implements OnInit {
     this.mobileView = this.deviceService.isMobile();
     this.tabletView = this.deviceService.isTablet();
     this.desktopView = this.deviceService.isDesktop();
+  }
+
+  onLoadPortfolio() {
+    this.loadLanding = false;
+    this.loadPortfolio = true;
+    this.loadMobilePortfolio = false;
+  }
+
+  onLoadMobilePortfolio() {
+    this.loadLanding = false;
+    this.loadPortfolio = false;
+    this.loadMobilePortfolio = true;
   }
 
 }

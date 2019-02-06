@@ -27,7 +27,16 @@
 }
 
 .the-writer-div {
+    background-color: rgb(20, 42, 53, 0.85);
     color: rgb(249, 138, 44);
     border-bottom-left-radius: 21px;
     border-bottom-right-radius: 21px;
+}
+
+.nav-title {
+    color: rgb(20, 42, 53);
+    font-weight: bolder;
+    background-color: rgb(249, 138, 44);
+    border: 1px solid rgb(249, 138, 44);
+    border-radius: 7px;
 }

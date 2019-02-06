@@ -24,18 +24,21 @@ export class SinglePageAppComponentMobile implements OnInit {
     this.theManLoaded = true;
     this.theProgrammerLoaded = false;
     this.theWriterLoaded = false;
+    this.navbarOpen = !this.navbarOpen;
   }
 
   loadTheProgrammer() {
     this.theManLoaded = false;
     this.theProgrammerLoaded = true;
     this.theWriterLoaded = false;
+    this.navbarOpen = !this.navbarOpen;
   }
 
   loadTheWriter() {
     this.theManLoaded = false;
     this.theProgrammerLoaded = false;
     this.theWriterLoaded = true;
+    this.navbarOpen = !this.navbarOpen;
   }
 
 }
