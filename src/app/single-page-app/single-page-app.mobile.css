@@ -1,0 +1,33 @@
+.theManBtn {
+    color: rgb(249, 138, 44);
+}
+
+.theProgrammerBtn {
+    color: #d5ecd7;
+}
+
+.theWriterBtn {
+    color: #9d9b8e;
+}
+
+.container {
+    text-align: center;
+}
+
+.the-man-div {
+    background-color: rgb(249, 138, 44, 0.83);
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+}
+
+.the-prog-div {
+    background-color: rgb(157, 155, 142, 0.55);
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+}
+
+.the-writer-div {
+    color: rgb(249, 138, 44);
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+}
