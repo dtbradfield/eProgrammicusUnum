@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
-
+import { DeviceDetectorModule } from 'ngx-device-detector';
+ 
 import { AppComponent } from './app.component';
 import { TheProgrammerComponent } from './trifold/the-programmer/the-programmer.component';
 import { TheManComponent } from './trifold/the-man/the-man.component';
@@ -13,9 +14,8 @@ import { SinglePageAppComponent } from './single-page-app/single-page-app.compon
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: LandingComponent },
-  { path: 'app', component: SinglePageAppComponent },
-  { path: '', redirectTo: 'app', pathMatch: 'full' },
+  { path: '', component: LandingComponent },
+  { path: 'portfolio', component: SinglePageAppComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -32,6 +32,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    DeviceDetectorModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [StarredConfigService],
