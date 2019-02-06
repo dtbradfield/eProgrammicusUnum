@@ -6,12 +6,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-page-app.mobile.css']
 })
 export class SinglePageAppComponentMobile implements OnInit {
-  
+  navbarOpen: boolean = false;
+  theManLoaded: boolean = true;
+  theProgrammerLoaded: boolean = false;
+  theWriterLoaded: boolean = false;
   
   constructor(  ) { }
 
   ngOnInit() {
   }
 
+  toggleNav() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
+  loadTheMan() {
+    this.theManLoaded = true;
+    this.theProgrammerLoaded = false;
+    this.theWriterLoaded = false;
+  }
+
+  loadTheProgrammer() {
+    this.theManLoaded = false;
+    this.theProgrammerLoaded = true;
+    this.theWriterLoaded = false;
+  }
+
+  loadTheWriter() {
+    this.theManLoaded = false;
+    this.theProgrammerLoaded = false;
+    this.theWriterLoaded = true;
+  }
 
 }

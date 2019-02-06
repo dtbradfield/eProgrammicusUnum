@@ -1,4 +1,48 @@
-<p>
-    Works
-    
-</p>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="mobile">
+            DT Bradfield
+        </a>
+        <button class="navbar-toggler" type="button" (click)="toggleNav()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <button class="btn theManBtn" (click)="loadTheMan()">
+                        theMan
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn theProgrammerBtn" (click)="loadTheProgrammer()">
+                        theProgrammer
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn theWriterBtn" (click)="loadTheWriter()">
+                        theWriter
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row" *ngIf="theManLoaded">
+            <div class="col-xs-12">
+                <app-the-man></app-the-man>
+            </div>
+        </div>
+        <div class="row" *ngIf="theProgrammerLoaded">
+            <div class="col-xs-12">
+                <app-the-programmer></app-the-programmer>
+            </div>
+        </div>
+        <div class="row" *ngIf="theWriterLoaded">
+            <div class="col-xs-12">
+                <app-the-writer></app-the-writer>
+            </div>
+        </div>
+    </div>
+</body>
