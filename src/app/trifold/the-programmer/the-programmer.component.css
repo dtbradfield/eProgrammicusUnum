@@ -1,0 +1,21 @@
+.container {
+    margin-top: 25%;
+    margin-left: 2%;
+}
+
+.githubProjects {
+    color: #d5ecd7;
+}
+
+.githubList {
+    margin-right: 3%;
+    margin-bottom: 3%;
+    background-color:rgb(20, 42, 53, 0.75);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 2%;
+}
+
+h2 {
+    color: #d5ecd7;
+}

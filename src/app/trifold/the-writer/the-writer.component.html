@@ -1,0 +1,20 @@
+<div class="container">
+    <h2 class="animate">theWriter</h2>
+    <hr>
+    <button class="btn animate" (click)="onRevealWriting()">
+        Click to {{ clickMessage }} Donald's Written Works
+    </button>
+    <hr>
+
+    <div *ngIf="revealWriting" class="essaysList">
+        <div *ngFor="let doc of essays; let i = index"  class="animate">
+            <br />
+            <a href="{{ essays[i].link }}" target="blank" class="essaysElement">
+                <h5>{{ essays[i].title }}</h5>
+                <h6>Donald T. Bradfield</h6>
+                <p>{{ essays[i].description }}</p>
+            </a>
+            <hr>
+        </div>
+    </div>
+</div>

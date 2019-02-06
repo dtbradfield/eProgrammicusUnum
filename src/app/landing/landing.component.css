@@ -1,0 +1,47 @@
+.split {
+    height: 100%;
+    width: 50%;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 2%;
+}
+
+.left {
+    left: 0;
+    background-color: #142a35ff;
+    color: #F98A2C;
+}
+
+.right {
+    right: 0;
+    background-color: #98CE00;
+    color: #757780;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.border {
+    transition: all 0.3s ease;
+}
+
+.border:hover {
+    box-shadow: inset 0 0 0 70px #142a35ff;
+}
+
+.dtbLogo {
+    transition: all 0.3s ease;
+}
+
+.dtbLogo:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}

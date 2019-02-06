@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class="animate">theProgrammer</h2>
+  <hr>
+  <button class="btn animate" style="color: #d5ecd7;" (click)="onRevealCodeProjects()">
+      Click to {{ clickMessage }} Github Projects
+  </button>
+
+  <hr>
+
+  <div *ngIf="revealProjects" class="githubList">
+      <div *ngFor="let project of projects; let i = index" class="animate">
+          <br />
+          <a href="{{ projects[i].html_url }}" target="blank" class="githubProjects">
+              <h5>{{ projects[i].name }}</h5>
+              <h6>{{ projects[i].owner.login }}</h6>
+              <p>{{ projects[i].description }}</p>
+          </a>
+          <hr>
+      </div>
+  </div>
+</div>
