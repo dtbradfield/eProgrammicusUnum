@@ -1,3 +1,17 @@
+
+# Tools used:
+MEAN Stack
+Bootstrap CSS
+RESTful APIs
+Postman for API testing
+Body-parser
+NodeMon
+Morgan
+mLab
+AWS
+MongoBooster
+
+
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
