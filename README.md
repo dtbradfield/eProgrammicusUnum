@@ -1,3 +1,8 @@
+I have crafted this Single Page Application with Angular 7 (TypeScript) using the Angular CLI as well as Visual Studio Code to code the logic. This project Reads from my GitHub API to Dynamically display my starred repositories and Dynamically links to each of them.
+Medium's API isn't publicly available so I had to hard-code each of those in.
+Styling uses Bootstrap.
+
+
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
